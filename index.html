@@ -1,352 +1,517 @@
 <!doctype html>
 <html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lixin - Công ty TNHH Dịch vụ và Tư vấn Lixin. Tư vấn thuế, kế toán, chữ ký số, hóa đơn điện tử. MST: 3901276714"
+    />
+    <title>Lixin Consulting | Accounting - Tax - Consulting</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Lixin - Công ty TNHH Dịch vụ và Tư vấn Lixin. Tư vấn thuế, kế toán, chữ ký số, hóa đơn điện tử. MST: 3901276714" />
-  <title>Lixin Consulting | Accounting - Tax - Consulting</title>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Lixin Consulting | Accounting - Tax - Consulting" />
+    <meta
+      property="og:description"
+      content="Tư vấn thuế, kế toán, chữ ký số, hóa đơn điện tử. Lixin - Sự chính trực tạo nên giá trị."
+    />
+    <meta property="og:image" content="https://lixin.vn/og-image.jpg" />
+    <meta property="og:url" content="https://lixin.vn" />
+    <meta property="og:type" content="website" />
 
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Lixin Consulting | Accounting - Tax - Consulting" />
-  <meta property="og:description" content="Tư vấn thuế, kế toán, chữ ký số, hóa đơn điện tử. Lixin - Sự chính trực tạo nên giá trị." />
-  <meta property="og:image" content="https://lixin.vn/og-image.jpg" />
-  <meta property="og:url" content="https://lixin.vn" />
-  <meta property="og:type" content="website" />
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lixin Consulting | Accounting - Tax - Consulting" />
+    <meta
+      name="twitter:description"
+      content="Tư vấn thuế, kế toán, chữ ký số, hóa đơn điện tử. Lixin - Sự chính trực tạo nên giá trị."
+    />
+    <meta name="twitter:image" content="https://lixin.vn/twitter-image.jpg" />
 
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Lixin Consulting | Accounting - Tax - Consulting" />
-  <meta name="twitter:description" content="Tư vấn thuế, kế toán, chữ ký số, hóa đơn điện tử. Lixin - Sự chính trực tạo nên giá trị." />
-  <meta name="twitter:image" content="https://lixin.vn/twitter-image.jpg" />
+    <link rel="canonical" href="https://lixin.vn" />
 
-  <link rel="canonical" href="https://lixin.vn" />
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AccountingService",
+        "name": "Lixin Consulting & Services",
+        "description": "Tư vấn thuế, kế toán, chữ ký số, hóa đơn điện tử",
+        "telephone": "+84395536768",
+        "email": "lixinvn.co.ltd@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gò Dầu",
+          "addressRegion": "Tây Ninh",
+          "addressCountry": "VN"
+        }
+      }
+    </script>
 
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AccountingService",
-    "name": "Lixin Consulting & Services",
-    "description": "Tư vấn thuế, kế toán, chữ ký số, hóa đơn điện tử",
-    "telephone": "+84395536768",
-    "email": "lixinvn.co.ltd@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Gò Dầu",
-      "addressRegion": "Tây Ninh",
-      "addressCountry": "VN"
-    }
-  }
-  </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/src/style.css">
-</head>
-
-<body>
-
-  <header class="navbar">
-    <div class="container navbar-container">
-      <a href="/" class="logo">
-        <span class="logo-icon">
-          <svg width="28" height="28" viewBox="0 0 100 100" fill="none" class="lixin-logo-svg">
-            <path d="M15 15 L50 85 L55 75 L30 25 Z" fill="var(--accent-primary)" opacity="0.3" />
-            <path d="M25 10 L55 80 L85 10 L70 10 L55 55 L40 10 Z" fill="var(--accent-primary)" />
-          </svg>
-        </span>
-        <span class="logo-text">LIXIN<span class="highlight">.</span></span>
-      </a>
-      <nav class="nav-links">
-        <a href="#services" data-i18n="nav.services">Dịch vụ</a>
-        <a href="#about" data-i18n="nav.about">Về chúng tôi</a>
-        <a href="#news" data-i18n="nav.news">Tin tức</a>
-        <a href="#contact" data-i18n="nav.contact">Liên hệ</a>
-
-        <div class="lang-switcher">
-          <button class="lang-btn active" data-lang="vi">VI</button>
-          <button class="lang-btn" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="zh">中文</button>
-        </div>
-      </nav>
-      <a href="#contact" class="btn btn-primary nav-cta" data-i18n="nav.cta">Nhận tư vấn ngay</a>
-      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M3 12h18M3 6h18M3 18h18" />
-        </svg>
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-bg">
-        <div class="glow glow-1"></div>
-        <div class="glow glow-2"></div>
-      </div>
-      <div class="container hero-container">
-        <div class="hero-content">
-          <div class="badge" data-i18n="hero.badge">立信(越南)咨询服务有限公司 · Sự chính trực tạo nên giá trị</div>
-          <h1 data-i18n="hero.title">Accounting — Tax — <span class="highlight">Consulting</span></h1>
-          <p class="hero-desc" data-i18n="hero.desc">Tư vấn thuế, dịch vụ kế toán, kiểm tra báo cáo tài chính, đại lý
-            chữ ký số và hóa đơn điện tử. Lixin — sự chính trực tạo nên giá trị.</p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary btn-lg" data-i18n="hero.start">Bắt đầu ngay</a>
-            <a href="#services" class="btn btn-outline btn-lg" data-i18n="hero.learn">Tìm hiểu thêm</a>
-          </div>
-          <div class="stats">
-            <div class="stat-item">
-              <span class="stat-num">500+</span>
-              <span class="stat-label" data-i18n="stat.clients">Khách hàng</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num">10+</span>
-              <span class="stat-label" data-i18n="stat.exp">Năm kinh nghiệm</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num">100%</span>
-              <span class="stat-label" data-i18n="stat.security">Bảo mật dữ liệu</span>
-            </div>
-          </div>
-        </div>
-        <div class="hero-image">
-          <div class="glass-card main-glass-card pre-animate">
-            <div class="card-header">
-              <div class="dot dot-red"></div>
-              <div class="dot dot-yellow"></div>
-              <div class="dot dot-green"></div>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Tax Dashboard 2026</h3>
-              <div class="chart">
-                <div class="bar bar-1"></div>
-                <div class="bar bar-2"></div>
-                <div class="bar bar-3"></div>
-                <div class="bar bar-4"></div>
-              </div>
-              <div class="card-status">
-                <span class="status-icon">✓</span>
-                <span>All clear</span>
-              </div>
-            </div>
-          </div>
-          <div class="glass-card small-glass-card floating pre-animate">
-            <div class="icon-wrapper">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-              </svg>
-            </div>
-            <div class="info">
-              <span class="info-val">Cost Opt.</span>
-              <span class="info-lbl">- 20% Taxes</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="services" id="services">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2 data-i18n="services.title">Dịch vụ của chúng tôi</h2>
-          <p data-i18n="services.desc">Tổ chức kinh doanh dịch vụ toàn diện — Sự chính trực tạo nên giá trị</p>
-        </div>
-        <div class="grid services-grid">
-
-          <div class="service-card glass-panel pre-animate">
-            <div class="service-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                <path d="M14 2v6h6" />
-                <path d="M16 13H8" />
-                <path d="M16 17H8" />
-                <path d="M10 9H8" />
-              </svg>
-            </div>
-            <h3 data-i18n="service1.title">Tư vấn Thuế</h3>
-            <p data-i18n="service1.desc">Tư vấn chiến lược thuế GTGT, TNCN, TNDN. Hỗ trợ quyết toán thuế, xử lý rủi ro
-              pháp lý và tối ưu hóa nghĩa vụ thuế hợp pháp.</p>
-          </div>
-
-          <div class="service-card glass-panel pre-animate">
-            <div class="service-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 3v18h18" />
-                <path d="M18 9l-5 5-4-4-5 5" />
-              </svg>
-            </div>
-            <h3 data-i18n="service2.title">Kế toán &amp; Kiểm tra BCTC</h3>
-            <p data-i18n="service2.desc">Dịch vụ kế toán trọn gói, kiểm tra và hoàn thiện báo cáo tài chính. Bố trí lại
-              sổ sách trước mỗi kỳ thanh kiểm tra.</p>
-          </div>
-
-          <div class="service-card glass-panel pre-animate">
-            <div class="service-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                <path d="M9 12l2 2 4-4" />
-              </svg>
-            </div>
-            <h3 data-i18n="service3.title">Chữ ký số &amp; Hóa đơn điện tử</h3>
-            <p data-i18n="service3.desc">Đại lý chữ ký số chính hãng, triển khai hóa đơn điện tử theo Nghị định
-              123/2020/NĐ-CP. Hỗ trợ cài đặt và hướng dẫn sử dụng.</p>
-          </div>
-
-          <div class="service-card glass-panel pre-animate">
-            <div class="service-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-              </svg>
-            </div>
-            <h3 data-i18n="service4.title">Thành lập Doanh nghiệp</h3>
-            <p data-i18n="service4.desc">Tư vấn và thực hiện thủ tục thành lập công ty, đăng ký kinh doanh, giấy phép
-              con. Hỗ trợ sau thành lập toàn diện.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="workflow" id="about">
-      <div class="container workflow-container">
-        <div class="workflow-content">
-          <h2 data-i18n="about.title">Tại sao chọn <span class="highlight">Lixin</span>?</h2>
-          <p data-i18n="about.desc">Sự khác biệt của chúng tôi đến từ quy trình làm việc chuyên nghiệp, ứng dụng sâu
-            công nghệ và sự am hiểu.</p>
-
-          <ul class="feature-list">
-            <li class="pre-animate">
-              <div class="feat-icon">✓</div>
-              <div class="feat-text">
-                <strong data-i18n="feat1.title">Chính xác tuyệt đối</strong>
-                <span data-i18n="feat1.desc">Áp dụng công nghệ tiên tiến, hạn chế tối đa sai sót.</span>
-              </div>
-            </li>
-            <li class="pre-animate">
-              <div class="feat-icon">✓</div>
-              <div class="feat-text">
-                <strong data-i18n="feat2.title">Bảo mật thông tin</strong>
-                <span data-i18n="feat2.desc">Mọi dữ liệu kinh doanh của bạn luôn được mã hóa và bảo vệ nghiêm
-                  ngặt.</span>
-              </div>
-            </li>
-            <li class="pre-animate">
-              <div class="feat-icon">✓</div>
-              <div class="feat-text">
-                <strong data-i18n="feat3.title">Hỗ trợ 24/7</strong>
-                <span data-i18n="feat3.desc">Giải đáp thắc mắc và xử lý các vấn đề phát sinh ngay lập tức.</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="workflow-visual">
-          <div class="circle-graphic">
-            <div class="core-circle">Lixin</div>
-            <div class="orbit-circle orbit-1"><span>Tax</span></div>
-            <div class="orbit-circle orbit-2"><span>Finance</span></div>
-            <div class="orbit-circle orbit-3"><span>Accounting</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- News Section -->
-    <section class="news" id="news">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2 data-i18n="news.title">Tin tức nổi bật</h2>
-          <p data-i18n="news.desc">Cập nhật những thông tin mới nhất từ chuyên gia và Trợ lý AI của Lixin</p>
-        </div>
-        <div class="news-grid" id="news-container">
-          <!-- Populated by JS -->
-        </div>
-      </div>
-    </section>
-
-    <section class="cta" id="contact">
-      <div class="container">
-        <div class="cta-box glass-panel pre-animate">
-          <div class="cta-content">
-            <h2 data-i18n="cta.title">Sẵn sàng tối ưu hóa hệ thống thuế của bạn?</h2>
-            <p data-i18n="cta.desc">Để lại thông tin, chuyên gia của chúng tôi sẽ liên hệ tư vấn miễn phí.</p>
-          </div>
-          <form class="contact-form">
-            <input type="text" name="name" data-i18n="form.name" placeholder="Tên của bạn *" required />
-            <input type="tel" name="phone" data-i18n="form.phone" placeholder="Số điện thoại *" required />
-            <input type="email" name="email" data-i18n="form.email" placeholder="Email doanh nghiệp" />
-            <input type="text" name="company_name" data-i18n="form.company" placeholder="Tên công ty" />
-            <select name="service_type" id="service-select">
-              <option value="general" data-i18n-option="form.opt.general">-- Dịch vụ quan tâm --</option>
-              <option value="tax_consulting" data-i18n-option="form.opt.tax">Tư vấn thuế</option>
-              <option value="accounting" data-i18n-option="form.opt.accounting">Kế toán &amp; Kiểm tra BCTC</option>
-              <option value="digital_signature" data-i18n-option="form.opt.signature">Chữ ký số &amp; Hóa đơn điện tử</option>
-              <option value="company_setup" data-i18n-option="form.opt.setup">Thành lập Doanh nghiệp</option>
-              <option value="other" data-i18n-option="form.opt.other">Khác</option>
-            </select>
-            <textarea name="message" rows="3" data-i18n="form.message"
-              placeholder="Ghi chú thêm (không bắt buộc)"></textarea>
-            <button class="btn btn-primary btn-block" type="submit" data-i18n="form.submit">Gửi yêu cầu</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-container">
-      <div class="footer-col">
+  <body>
+    <header class="navbar">
+      <div class="container navbar-container">
         <a href="/" class="logo">
-          <span class="logo-text">LIXIN<span class="highlight">.</span></span>
+          <span class="logo-icon">
+            <svg width="28" height="28" viewBox="0 0 100 100" fill="none" class="lixin-logo-svg">
+              <path d="M15 15 L50 85 L55 75 L30 25 Z" fill="var(--accent-primary)" opacity="0.3" />
+              <path d="M25 10 L55 80 L85 10 L70 10 L55 55 L40 10 Z" fill="var(--accent-primary)" />
+            </svg>
+          </span>
+          <span class="logo-text">
+            LIXIN
+            <span class="highlight">.</span>
+          </span>
         </a>
-        <p class="footer-desc" data-i18n="footer.desc">Công ty TNHH Dịch vụ và Tư vấn Lixin (立信越南咨询服务有限公司). Sự chính
-          trực tạo nên giá trị.</p>
-        <p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.5rem">MST: 3901276714</p>
+        <nav class="nav-links">
+          <a href="#services" data-i18n="nav.services">Dịch vụ</a>
+          <a href="#about" data-i18n="nav.about">Về chúng tôi</a>
+          <a href="#news" data-i18n="nav.news">Tin tức</a>
+          <a href="#contact" data-i18n="nav.contact">Liên hệ</a>
+
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="vi">VI</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="zh">中文</button>
+          </div>
+        </nav>
+        <a href="#contact" class="btn btn-primary nav-cta" data-i18n="nav.cta">Nhận tư vấn ngay</a>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M3 12h18M3 6h18M3 18h18" />
+          </svg>
+        </button>
       </div>
-      <div class="footer-col">
-        <h4 data-i18n="footer.links">Liên kết nhanh</h4>
-        <a href="#services" data-i18n="nav.services">Dịch vụ</a>
-        <a href="#about" data-i18n="nav.about">Về chúng tôi</a>
-        <a href="#news" data-i18n="nav.news">Tin tức</a>
-        <a href="#contact" data-i18n="nav.contact">Liên hệ</a>
-      </div>
-      <div class="footer-col">
-        <h4 data-i18n="footer.contact">Thông tin liên hệ</h4>
-        <p>📧 lixinvn.co.ltd@gmail.com</p>
-        <p>📞 039 553 67 68 (Ms Ivy)</p>
-        <p data-i18n="footer.address">📍 Ấp 4, Tổ 4, Số 2, Xã Bàu Đồn, Huyện Gò Dầu, Tỉnh Tây Ninh</p>
-        <div style="display:flex;gap:0.75rem;margin-top:0.75rem">
-          <a href="https://zalo.me/0395536768" target="_blank" title="Zalo"
-            style="color:var(--accent-primary);font-size:1.2rem">Ⓩ</a>
-          <a href="tel:0395536768" title="Gọi điện" style="color:var(--accent-primary);font-size:1.2rem">📞</a>
-          <a href="mailto:lixinvn.co.ltd@gmail.com" title="Email"
-            style="color:var(--accent-primary);font-size:1.2rem">✉</a>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-bg">
+          <div class="glow glow-1"></div>
+          <div class="glow glow-2"></div>
+        </div>
+        <div class="container hero-container">
+          <div class="hero-content">
+            <div class="badge" data-i18n="hero.badge">
+              立信(越南)咨询服务有限公司 · Sự chính trực tạo nên giá trị
+            </div>
+            <h1 data-i18n="hero.title">
+              Accounting — Tax —
+              <span class="highlight">Consulting</span>
+            </h1>
+            <p class="hero-desc" data-i18n="hero.desc">
+              Tư vấn thuế, dịch vụ kế toán, kiểm tra báo cáo tài chính, đại lý chữ ký số và hóa đơn
+              điện tử. Lixin — sự chính trực tạo nên giá trị.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary btn-lg" data-i18n="hero.start">
+                Bắt đầu ngay
+              </a>
+              <a href="#services" class="btn btn-outline btn-lg" data-i18n="hero.learn">
+                Tìm hiểu thêm
+              </a>
+            </div>
+            <div class="stats">
+              <div class="stat-item">
+                <span class="stat-num">500+</span>
+                <span class="stat-label" data-i18n="stat.clients">Khách hàng</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">10+</span>
+                <span class="stat-label" data-i18n="stat.exp">Năm kinh nghiệm</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-label" data-i18n="stat.security">Bảo mật dữ liệu</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="glass-card main-glass-card pre-animate">
+              <div class="card-header">
+                <div class="dot dot-red"></div>
+                <div class="dot dot-yellow"></div>
+                <div class="dot dot-green"></div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Tax Dashboard 2026</h3>
+                <div class="chart">
+                  <div class="bar bar-1"></div>
+                  <div class="bar bar-2"></div>
+                  <div class="bar bar-3"></div>
+                  <div class="bar bar-4"></div>
+                </div>
+                <div class="card-status">
+                  <span class="status-icon">✓</span>
+                  <span>All clear</span>
+                </div>
+              </div>
+            </div>
+            <div class="glass-card small-glass-card floating pre-animate">
+              <div class="icon-wrapper">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg>
+              </div>
+              <div class="info">
+                <span class="info-val">Cost Opt.</span>
+                <span class="info-lbl">- 20% Taxes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="services">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 data-i18n="services.title">Dịch vụ của chúng tôi</h2>
+            <p data-i18n="services.desc">
+              Tổ chức kinh doanh dịch vụ toàn diện — Sự chính trực tạo nên giá trị
+            </p>
+          </div>
+          <div class="grid services-grid">
+            <div class="service-card glass-panel pre-animate">
+              <div class="service-icon">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <path d="M14 2v6h6" />
+                  <path d="M16 13H8" />
+                  <path d="M16 17H8" />
+                  <path d="M10 9H8" />
+                </svg>
+              </div>
+              <h3 data-i18n="service1.title">Tư vấn Thuế</h3>
+              <p data-i18n="service1.desc">
+                Tư vấn chiến lược thuế GTGT, TNCN, TNDN. Hỗ trợ quyết toán thuế, xử lý rủi ro pháp
+                lý và tối ưu hóa nghĩa vụ thuế hợp pháp.
+              </p>
+            </div>
+
+            <div class="service-card glass-panel pre-animate">
+              <div class="service-icon">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M3 3v18h18" />
+                  <path d="M18 9l-5 5-4-4-5 5" />
+                </svg>
+              </div>
+              <h3 data-i18n="service2.title">Kế toán &amp; Kiểm tra BCTC</h3>
+              <p data-i18n="service2.desc">
+                Dịch vụ kế toán trọn gói, kiểm tra và hoàn thiện báo cáo tài chính. Bố trí lại sổ
+                sách trước mỗi kỳ thanh kiểm tra.
+              </p>
+            </div>
+
+            <div class="service-card glass-panel pre-animate">
+              <div class="service-icon">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+              </div>
+              <h3 data-i18n="service3.title">Chữ ký số &amp; Hóa đơn điện tử</h3>
+              <p data-i18n="service3.desc">
+                Đại lý chữ ký số chính hãng, triển khai hóa đơn điện tử theo Nghị định
+                123/2020/NĐ-CP. Hỗ trợ cài đặt và hướng dẫn sử dụng.
+              </p>
+            </div>
+
+            <div class="service-card glass-panel pre-animate">
+              <div class="service-icon">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                </svg>
+              </div>
+              <h3 data-i18n="service4.title">Thành lập Doanh nghiệp</h3>
+              <p data-i18n="service4.desc">
+                Tư vấn và thực hiện thủ tục thành lập công ty, đăng ký kinh doanh, giấy phép con. Hỗ
+                trợ sau thành lập toàn diện.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workflow" id="about">
+        <div class="container workflow-container">
+          <div class="workflow-content">
+            <h2 data-i18n="about.title">
+              Tại sao chọn
+              <span class="highlight">Lixin</span>
+              ?
+            </h2>
+            <p data-i18n="about.desc">
+              Sự khác biệt của chúng tôi đến từ quy trình làm việc chuyên nghiệp, ứng dụng sâu công
+              nghệ và sự am hiểu.
+            </p>
+
+            <ul class="feature-list">
+              <li class="pre-animate">
+                <div class="feat-icon">✓</div>
+                <div class="feat-text">
+                  <strong data-i18n="feat1.title">Chính xác tuyệt đối</strong>
+                  <span data-i18n="feat1.desc">
+                    Áp dụng công nghệ tiên tiến, hạn chế tối đa sai sót.
+                  </span>
+                </div>
+              </li>
+              <li class="pre-animate">
+                <div class="feat-icon">✓</div>
+                <div class="feat-text">
+                  <strong data-i18n="feat2.title">Bảo mật thông tin</strong>
+                  <span data-i18n="feat2.desc">
+                    Mọi dữ liệu kinh doanh của bạn luôn được mã hóa và bảo vệ nghiêm ngặt.
+                  </span>
+                </div>
+              </li>
+              <li class="pre-animate">
+                <div class="feat-icon">✓</div>
+                <div class="feat-text">
+                  <strong data-i18n="feat3.title">Hỗ trợ 24/7</strong>
+                  <span data-i18n="feat3.desc">
+                    Giải đáp thắc mắc và xử lý các vấn đề phát sinh ngay lập tức.
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="workflow-visual">
+            <div class="circle-graphic">
+              <div class="core-circle">Lixin</div>
+              <div class="orbit-circle orbit-1"><span>Tax</span></div>
+              <div class="orbit-circle orbit-2"><span>Finance</span></div>
+              <div class="orbit-circle orbit-3"><span>Accounting</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- News Section -->
+      <section class="news" id="news">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 data-i18n="news.title">Tin tức nổi bật</h2>
+            <p data-i18n="news.desc">
+              Cập nhật những thông tin mới nhất từ chuyên gia và Trợ lý AI của Lixin
+            </p>
+          </div>
+          <div class="news-grid" id="news-container">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" id="contact">
+        <div class="container">
+          <div class="cta-box glass-panel pre-animate">
+            <div class="cta-content">
+              <h2 data-i18n="cta.title">Sẵn sàng tối ưu hóa hệ thống thuế của bạn?</h2>
+              <p data-i18n="cta.desc">
+                Để lại thông tin, chuyên gia của chúng tôi sẽ liên hệ tư vấn miễn phí.
+              </p>
+            </div>
+            <form class="contact-form">
+              <input
+                type="text"
+                name="name"
+                data-i18n="form.name"
+                placeholder="Tên của bạn *"
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                data-i18n="form.phone"
+                placeholder="Số điện thoại *"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                data-i18n="form.email"
+                placeholder="Email doanh nghiệp"
+              />
+              <input
+                type="text"
+                name="company_name"
+                data-i18n="form.company"
+                placeholder="Tên công ty"
+              />
+              <select name="service_type" id="service-select">
+                <option value="general" data-i18n-option="form.opt.general">
+                  -- Dịch vụ quan tâm --
+                </option>
+                <option value="tax_consulting" data-i18n-option="form.opt.tax">Tư vấn thuế</option>
+                <option value="accounting" data-i18n-option="form.opt.accounting">
+                  Kế toán &amp; Kiểm tra BCTC
+                </option>
+                <option value="digital_signature" data-i18n-option="form.opt.signature">
+                  Chữ ký số &amp; Hóa đơn điện tử
+                </option>
+                <option value="company_setup" data-i18n-option="form.opt.setup">
+                  Thành lập Doanh nghiệp
+                </option>
+                <option value="other" data-i18n-option="form.opt.other">Khác</option>
+              </select>
+              <textarea
+                name="message"
+                rows="3"
+                data-i18n="form.message"
+                placeholder="Ghi chú thêm (không bắt buộc)"
+              ></textarea>
+              <button class="btn btn-primary btn-block" type="submit" data-i18n="form.submit">
+                Gửi yêu cầu
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-container">
+        <div class="footer-col">
+          <a href="/" class="logo">
+            <span class="logo-text">
+              LIXIN
+              <span class="highlight">.</span>
+            </span>
+          </a>
+          <p class="footer-desc" data-i18n="footer.desc">
+            Công ty TNHH Dịch vụ và Tư vấn Lixin (立信越南咨询服务有限公司). Sự chính trực tạo nên
+            giá trị.
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem">
+            MST: 3901276714
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.links">Liên kết nhanh</h4>
+          <a href="#services" data-i18n="nav.services">Dịch vụ</a>
+          <a href="#about" data-i18n="nav.about">Về chúng tôi</a>
+          <a href="#news" data-i18n="nav.news">Tin tức</a>
+          <a href="#contact" data-i18n="nav.contact">Liên hệ</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.contact">Thông tin liên hệ</h4>
+          <p>📧 lixinvn.co.ltd@gmail.com</p>
+          <p>📞 039 553 67 68 (Ms Ivy)</p>
+          <p data-i18n="footer.address">
+            📍 Ấp 4, Tổ 4, Số 2, Xã Bàu Đồn, Huyện Gò Dầu, Tỉnh Tây Ninh
+          </p>
+          <div style="display: flex; gap: 0.75rem; margin-top: 0.75rem">
+            <a
+              href="https://zalo.me/0395536768"
+              target="_blank"
+              title="Zalo"
+              style="color: var(--accent-primary); font-size: 1.2rem"
+            >
+              Ⓩ
+            </a>
+            <a
+              href="tel:0395536768"
+              title="Gọi điện"
+              style="color: var(--accent-primary); font-size: 1.2rem"
+            >
+              📞
+            </a>
+            <a
+              href="mailto:lixinvn.co.ltd@gmail.com"
+              title="Email"
+              style="color: var(--accent-primary); font-size: 1.2rem"
+            >
+              ✉
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom container">
-      <p data-i18n="footer.copyright">&copy; 2026 Lixin Consulting &amp; Services Co., Ltd. (立信越南咨询服务有限公司)</p>
-      <a href="/admin.html" class="admin-link">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-        </svg>
-        Admin Portal
-      </a>
-    </div>
-  </footer>
+      <div class="footer-bottom container">
+        <p data-i18n="footer.copyright">
+          &copy; 2026 Lixin Consulting &amp; Services Co., Ltd. (立信越南咨询服务有限公司)
+        </p>
+        <a href="/admin.html" class="admin-link">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
+          Admin Portal
+        </a>
+      </div>
+    </footer>
 
-  <!-- Scroll to top button -->
-  <button class="scroll-top" aria-label="Scroll to top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M18 15l-6-6-6 6" />
-    </svg>
-  </button>
+    <!-- Scroll to top button -->
+    <button class="scroll-top" aria-label="Scroll to top">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
 
-  <script type="module" src="/src/main.js"></script>
-</body>
-
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

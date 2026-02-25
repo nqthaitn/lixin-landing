@@ -10,7 +10,7 @@ function applyTranslations(lang) {
 
   // Update texts
   const elements = document.querySelectorAll('[data-i18n]');
-  elements.forEach(el => {
+  elements.forEach((el) => {
     const key = el.getAttribute('data-i18n');
     if (translations[lang] && translations[lang][key]) {
       if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
@@ -22,12 +22,12 @@ function applyTranslations(lang) {
   });
 
   // Update language switcher UI
-  document.querySelectorAll('.lang-btn').forEach(btn => {
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
   });
 
   // Update select option texts
-  document.querySelectorAll('[data-i18n-option]').forEach(option => {
+  document.querySelectorAll('[data-i18n-option]').forEach((option) => {
     const key = option.getAttribute('data-i18n-option');
     if (translations[lang] && translations[lang][key]) {
       option.textContent = translations[lang][key];
@@ -46,16 +46,17 @@ async function renderNews() {
   if (!container) return;
 
   const allNews = await getNews();
-  const newsItems = allNews.filter(n => n.is_highlight);
+  const newsItems = allNews.filter((n) => n.is_highlight);
 
-  container.innerHTML = newsItems.map(item => {
-    // Dynamically pick the correct language column
-    const title = item[`title_${currentLang}`] || item.title_vi || '';
-    const excerpt = item[`excerpt_${currentLang}`] || item.excerpt_vi || '';
-    const isAi = item.author_role === 'ai_agent';
-    const dateStr = item.created_at ? item.created_at.split('T')[0] : '';
+  container.innerHTML = newsItems
+    .map((item) => {
+      // Dynamically pick the correct language column
+      const title = item[`title_${currentLang}`] || item.title_vi || '';
+      const excerpt = item[`excerpt_${currentLang}`] || item.excerpt_vi || '';
+      const isAi = item.author_role === 'ai_agent';
+      const dateStr = item.created_at ? item.created_at.split('T')[0] : '';
 
-    return `
+      return `
     <div class="news-card pre-animate">
       <img src="${item.cover_image}" alt="${title}" class="news-img" />
       <div class="news-content">
@@ -63,15 +64,18 @@ async function renderNews() {
         <h3 class="news-title">${title}</h3>
         <p class="news-excerpt">${excerpt}</p>
         <div class="news-author">
-          ${isAi
-        ? '<span class="ai-badge">AI Agent</span>'
-        : '<span class="ai-badge" style="background:var(--accent-secondary)">Admin</span>'}
+          ${
+            isAi
+              ? '<span class="ai-badge">AI Agent</span>'
+              : '<span class="ai-badge" style="background:var(--accent-secondary)">Admin</span>'
+          }
           <span>${item.author}</span>
         </div>
       </div>
     </div>
   `;
-  }).join('');
+    })
+    .join('');
 
   // Observe new elements for scroll animations
   initObserver();
@@ -85,7 +89,7 @@ function initObserver() {
   if (!observer) {
     const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
     observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-up');
           obs.unobserve(entry.target);
@@ -94,7 +98,7 @@ function initObserver() {
     }, observerOptions);
   }
 
-  document.querySelectorAll('.pre-animate:not(.animate-up)').forEach(el => {
+  document.querySelectorAll('.pre-animate:not(.animate-up)').forEach((el) => {
     observer.observe(el);
   });
 }
@@ -117,7 +121,7 @@ async function handleContactFormSubmit(e) {
   const submitBtn = document.querySelector('.contact-form button[type="submit"]');
   const orgText = submitBtn.innerText;
 
-  submitBtn.innerText = "...";
+  submitBtn.innerText = '...';
   submitBtn.disabled = true;
 
   try {
@@ -128,19 +132,19 @@ async function handleContactFormSubmit(e) {
       company_name: company_name || null,
       service_type: service_type || 'general',
       message: message || null,
-      language: currentLang
+      language: currentLang,
     });
 
     // Success feedback (multi-language)
     const msgs = {
       vi: 'Cảm ơn! Yêu cầu của bạn đã được gửi thành công. Lixin sẽ liên hệ sớm.',
       en: 'Thank you! Your request was sent successfully. Lixin will contact you soon.',
-      zh: '谢谢！您的请求已成功发送。力信将尽快与您联系。'
+      zh: '谢谢！您的请求已成功发送。力信将尽快与您联系。',
     };
     alert(msgs[currentLang] || msgs.vi);
     e.target.reset();
   } catch (err) {
-    alert("Có lỗi xảy ra, vui lòng thử lại sau.");
+    alert('Có lỗi xảy ra, vui lòng thử lại sau.');
   } finally {
     submitBtn.innerText = orgText;
     submitBtn.disabled = false;
@@ -152,16 +156,18 @@ async function handleContactFormSubmit(e) {
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
   // Language switcher
-  document.querySelectorAll('.lang-btn').forEach(btn => {
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
     btn.addEventListener('click', (e) => {
       applyTranslations(e.target.getAttribute('data-lang'));
     });
   });
 
   // Register scroll animation targets
-  document.querySelectorAll('section, .service-card, .feat-item, .glass-card, .cta-box').forEach(el => {
-    el.classList.add('pre-animate');
-  });
+  document
+    .querySelectorAll('section, .service-card, .feat-item, .glass-card, .cta-box')
+    .forEach((el) => {
+      el.classList.add('pre-animate');
+    });
 
   // Attach contact form handler
   const contactForm = document.querySelector('.contact-form');
@@ -198,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Close menu when clicking a link
-    navLinks.querySelectorAll('a').forEach(link => {
+    navLinks.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
@@ -229,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollTopBtn.addEventListener('click', () => {
       window.scrollTo({
         top: 0,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     });
   }

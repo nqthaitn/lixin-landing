@@ -2,7 +2,9 @@ import { supabase } from './supabase.js';
 
 // Check if user is logged in
 export async function checkAuth() {
-  const { data: { session } } = await supabase.auth.getSession();
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
   return session;
 }
 
